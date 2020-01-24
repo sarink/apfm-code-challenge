@@ -8,7 +8,9 @@ const dotenv = require('dotenv');
 const envFile = path.resolve(__dirname, '../.env');
 const dotEnvConfig = dotenv.config({ path: envFile });
 if (dotEnvConfig.error) throw dotEnvConfig.error;
-const { FRONTEND_PORT, FRONTEND_HOST, NODE_ENV, APP_LOCATION } = dotEnvConfig.parsed;
+const appConfig = Object.keys(dotEnvConfig.parsed).length === 0 ? undefined : dotEnvConfig.parsed;
+console.log('using appConfig:', appConfig);
+const { FRONTEND_PORT, FRONTEND_HOST, NODE_ENV, APP_LOCATION } = appConfig;
 
 const srcDir = path.resolve(__dirname, 'src');
 const distDir = path.resolve(__dirname, 'dist', APP_LOCATION);
