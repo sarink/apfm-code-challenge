@@ -27,10 +27,6 @@ describe('Example', () => {
     expect(Cypress.version).to.be.a('string');
   });
 
-  it('Uses custom command cy.foo()', () => {
-    cy.foo().should('be.equal', 'foo');
-  });
-
   // Wrong code on purpose to type check our definitions
   // Uncomment and hopefully there's a ts error in your IDE
   // it('can visit website', () => {

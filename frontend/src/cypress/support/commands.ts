@@ -26,17 +26,3 @@
 
 // See more example of adding custom commands to Cypress TS interface
 // in https://github.com/cypress-io/add-cypress-custom-command-in-typescript
-
-// Add a custom command cy.foo()
-const foo: Commands['foo'] = () => 'foo';
-Cypress.Commands.add('foo', foo);
-
-declare global {
-  namespace Cypress {
-    interface Chainable {
-      foo: () => string;
-    }
-  }
-}
-
-type Commands = Cypress.Chainable<any>;
