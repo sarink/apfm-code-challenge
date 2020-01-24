@@ -1,0 +1,7 @@
+node_modules
+.awcache
+tmp
+dist
+src/cypress/test-reports
+src/cypress/screenshots
+src/cypress/videos
