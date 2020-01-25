@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) => {
 export interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = (props) => {
-  const classes = useStyles({});
+  const classes = useStyles();
   return (
     <footer className={classes.footer}>
       <BottomNavigation classes={{ root: classes.bottomNavigationRoot }} showLabels>

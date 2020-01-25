@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) => {
 export interface PageProps {}
 
 export const Page: React.FC<PageProps> = (props) => {
-  const classes = useStyles({});
+  const classes = useStyles();
   return (
     <Fade in>
       <main className={classes.page}>{props.children}</main>
