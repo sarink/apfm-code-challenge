@@ -1,7 +1,7 @@
 import { Theme } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/styles';
 import React from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import { Footer } from 'components/layout/Footer';
 import { Header } from 'components/layout/Header';
@@ -21,13 +21,7 @@ const useStyles = makeStyles((theme: Theme) => {
 export interface AppProps {}
 
 export const App: React.FC<AppProps> = (props) => {
-  const classes = useStyles({});
-  const history = useHistory();
-
-  if ((window as any).Cypress) {
-    (window as any).reactRouterHistory = history;
-  }
-
+  const classes = useStyles();
   return (
     <div className={classes.appWithStickyFooter}>
       <Header />
